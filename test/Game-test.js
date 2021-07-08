@@ -3,9 +3,7 @@ const expect = chai.expect;
 
 const Game = require('../src/Game');
 const Round = require('../src/Round');
-// const Deck = require('../src/Deck');
-// const Card = require('../src/Card');
-// const Turn = require('../src/Turn');
+
 
 
   describe('Game', function() {
@@ -34,10 +32,7 @@ const Round = require('../src/Round');
   });
 
   it('should be able to start a game and keep track of the game', function() {
-
     game.start();
-    // expect(game.currentRound).to.be.equal(game.round)
-    // console.log(game.currentRound)
     expect(game.currentRound).to.be.an.instanceof(Round);
 
 
