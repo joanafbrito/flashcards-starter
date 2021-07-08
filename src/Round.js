@@ -8,21 +8,21 @@ class Round {
   }
 
   returnCurrentCard() {
-    if(this.deck.countCards() < this.turns){
-      return null;
-    }
+    // if(this.deck.countCards() < this.turns){
+    //   return null;
+    // }
     let returnCard = this.deck.cards[this.turns]
 
     return returnCard;
   }
 
   takeTurn(guess) {
-    const turn = new Turn(guess,this.returnCurrentCard());
-    // const turn = new Turn(guess,this.deck.cards[this.turns];
+    // const turn = new Turn(guess,this.returnCurrentCard());
+    const turn = new Turn(guess,this.deck.cards[this.turns]);
 
 
     if(!turn.evaluateGuess()) {
-      this.incorrectGuesses.push(this.returnCurrentCard().id);
+      this.incorrectGuesses.push(this.deck.cards[this.turns].id);
     }
 
     this.turns++;
