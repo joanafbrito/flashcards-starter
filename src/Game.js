@@ -5,21 +5,17 @@ const util = require('./util');
 const Round = require('../src/Round');
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
-const Turn = require('../src/Turn');
 
 class Game {
   constructor() {
-
     this.currentRound = null;
-
-
   }
 
   start() {
     let card;
 
     let cardData = prototypeQuestions.map(function(data) {
-       card = new Card(data.id, data.question, data.answers, data.correctAnswer);
+      card = new Card(data.id, data.question, data.answers, data.correctAnswer);
       return card;
     });
 
@@ -28,17 +24,15 @@ class Game {
     this.printMessage(deck, round);
     this.printQuestion(round);
     this.currentRound = round;
-    // console.log(this.currentRound);
-
-  };
+  }
 
   printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
   printQuestion(round) {
-      util.main(round);
+    util.main(round);
   }
 }
 

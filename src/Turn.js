@@ -3,8 +3,8 @@ class Turn {
     this.guess = guess;
     this.currentCard = card;
     this.answer = false;
-
   }
+
   returnGuess() {
     return this.guess;
   }
@@ -27,7 +27,6 @@ class Turn {
     }
     return feedbackMessage;
   }
-
 }
 
 module.exports = Turn;
