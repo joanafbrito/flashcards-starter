@@ -4,7 +4,7 @@
   "description": "OOP Flashcards Application",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "nyc --reporter=html mocha",
     "lint": "./node_modules/.bin/eslint 'src/**.js' 'test/**.js'"
   },
   "keywords": [
@@ -18,7 +18,8 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "nyc": "^15.1.0"
   },
   "dependencies": {
     "inquirer": "^6.3.1"
