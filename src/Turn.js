@@ -22,7 +22,7 @@ class Turn {
 
   giveFeedback() {
     let feedbackMessage = 'correct!';
-    if (this.answer !== true) {
+    if (!this.answer) {
       return 'incorrect!'
     }
     return feedbackMessage;

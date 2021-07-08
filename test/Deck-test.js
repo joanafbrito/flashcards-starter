@@ -16,19 +16,21 @@ describe('Deck', function() {
     expect(deck).to.be.an.instanceof(Deck);
   });
 
-  it('should have cards', function() {
+  it('should store a list of cards', function() {
     const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
     const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
 
     const deck = new Deck([card1, card2, card3]);
 
+
+
+    expect(deck).to.have.property('cards').with.lengthOf(3);
+
     expect(deck.cards).to.deep.equal([card1, card2, card3]);
     expect(deck.cards).to.have.lengthOf(3);
     expect(deck.cards[1].correctAnswer).to.equal('gallbladder');
 
-    // expect(Deck).to.have.property('cards');
-    // .with.lengthof(3);
   });
 
   it('should be able to Count Cards', function() {
